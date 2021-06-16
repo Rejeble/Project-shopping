@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Online Shopping</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="src/main2.js" defer="defer"></script>
+
+    </head>
+    <body>
+
+        <!-- Logo -->
+        <img class="Logo" src="img/logo.png" alt="">
+        <!-- Menu -->
+        <div class="menu">
+
+            <!-- Img Button -->
+            <button class="btn BtnT"><img class="imgBtn" src="img/blue_t.png"  data-key="type" data-value="tshirt"  alt=""></button>
+            <button class="btn BtnP"><img class="imgBtn" src="img/blue_p.png"  data-key="type" data-value="pants"  alt=""></button>
+            <button class="btn BtnS"><img class="imgBtn" src="img/blue_s.png"  data-key="type" data-value="skirt"  alt=""></button>
+            <!-- Text Button -->
+            <button data-key="color"  data-value="blue"  class="btn TextBtn Blue_Btn">Blue</button>
+            <button data-key="color"  data-value="yellow"  class="btn TextBtn Yellow_Btn">Yellow</button>
+            <button data-key="color"  data-value="pink"  class="btn TextBtn Pink_Btn">Pink</button>
+
+        </div>
+
+        <div class="list_item scroll">
+            <ul id='items' class="items"></ul>
+        </div>
+    </body>
+</html>
