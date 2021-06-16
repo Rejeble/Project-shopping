@@ -1,0 +1,122 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* size */
+  --padding-large: 15px;
+  --padding-middle: 10px;
+  --padding-small: 5px;
+  --margin:10px;
+  --Logo:120px;
+  --btn-img-size:40px;
+  --btn-font-size:18px;
+  --Thumbnail-size:40px;
+  --list-size:450px;
+
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+}
+
+/* header */
+
+.Logo{
+  width:var(--Logo);
+  cursor: pointer;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--padding-middle);
+}
+
+.btn{
+  border:none;
+  outline: none;
+  /* padding: 0; */
+  margin-left: var(--margin);
+  background-color: transparent;  /* 배경 투명하게 */
+  cursor:pointer;
+  transform: all ease 1s;
+}
+
+.btn:hover{
+  transform: scale(1.1);          /* 이미지 확대 default */
+  -webkit-transform: scale(1.1);  /* 사파리, 크롬, 오페라 브라우저에서 사용 */
+
+}
+
+.menu .btn .imgBtn{
+  width:var(--btn-img-size)
+}
+
+.menu .TextBtn{
+  height: 100%;
+  font-size: var(--btn-font-size);
+  border-radius: 20%;
+  padding: var(--padding-middle);
+}
+
+.menu .Blue_Btn{
+  background-color: var(--color-blue);
+}
+
+.menu .Yellow_Btn{
+  background-color: var(--color-yellow);
+}
+
+.menu .Pink_Btn{
+  background-color: var(--color-pink);
+} 
+
+/* list item */
+
+.list_item{
+  width: var(--list-size);
+}
+
+.list_item .items {
+  list-style: none;
+  padding-left: 0;
+}
+.list_item .items .item {
+  margin: var(--margin);
+  display: flex;
+  background-color: var(--color-white);
+  align-items: center;
+  border-radius: 15px;
+}
+
+.list_item .items .item .Thumbnail{
+  padding:var(--padding-small);                   /*5px*/
+  padding-left: calc(var(--padding-large)*1.5);   /*22.5px*/
+}
+
+.list_item .items .item .item__Thumbnail{
+  width: var(--Thumbnail-size);
+}
+
+.list_item .items .listhidden {
+  display: none;
+}
+
+.scroll{
+  overflow: scroll;
+}
+
+.scroll::-webkit-scrollbar{
+  display: none;
+}
+
