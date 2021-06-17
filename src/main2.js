@@ -6,6 +6,7 @@ function loadItems() {
         .catch(error => console.log(error));
 }
 
+// item들을 html에 동적으로 할당하는 함수
 function displayItems(items) {
     const ulTag = document.getElementById('items');
     let html = items
@@ -14,6 +15,7 @@ function displayItems(items) {
     ulTag.innerHTML = html;
 }
 
+// 인자를 HTML 문자로 변형? 해주는 함수
 function createHTMLString(item) {
     return `
     <li class="item">
@@ -23,23 +25,28 @@ function createHTMLString(item) {
     `
 }
 
+// 버튼 이벤트 함수
 function onButtonEvent(event, items) {
-    const data = event.target.dataset;
-    const key = data.key;
-    const value = data.value;
+    const data = event.target.dataset;   // 클릭한 버튼의 데이터 받아오기
+    const key = data.key;                // 클릭한 버튼의 key data 
+    const value = data.value;            // 클릭한 버튼의 value data
+
+    // 버튼이 없는 영역 클릭시 return
     if (key == null || value == null) {
         return;
     }
 
+    // 버튼 클릭시 html class 업데이트
     update(items,key,value);
 
 }
 
+// item에 class를 추가해서 display 속성 사용
 function update(items, key, value) {
     const litag = document.getElementsByClassName('item');
     let length = 0;
     items.forEach(item => {
-        if (item[key] === value) {
+        if (item[key] === value) {    // json의 type과 html data-value의 값을 비교
             litag[length]
                 .classList
                 .remove('listhidden');
@@ -59,12 +66,14 @@ function homeReset(){
     }
 }
 
+// EventListener
 function setEventListeners(items) {
     const logo = document.querySelector('.Logo');
-    const btns = document.querySelector('.menu');
+    const btns = document.querySelector('.menu'); // .menu 영역을 클릭 범위로 할당, 리스너를 여러개 생성하지 않음
     logo.addEventListener('click', () => homeReset());
     btns.addEventListener('click', event => onButtonEvent(event, items));
 }
+
 
 loadItems()
     .then((items) => {
