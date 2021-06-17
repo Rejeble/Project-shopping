@@ -18,11 +18,11 @@ HTML 레이아웃, javascript 및 css 복습과 현재 실력 테스트 용
 
 > index.html : 초기 파일, Onclick 함수를 사용
 
-> src/main.js : json 데이터를 사용하지 않고 렌덤으로 item 생성 함수 및 동적으로 html 생성
+> src/main.js : json 데이터를 사용하지 않고 랜덤으로 item 생성 및 동적으로 html 생성
 
-> src/btnEvent.js : 버튼 이벤트 함수, 
+> src/btnEvent.js : 버튼 이벤트 함수
 
-> index2.jtml : 기존의 index.html에서 Onclick를 삭제한 버전
+> index2.jtml : index.html에서 Onclick 삭제, **dataset 사용**
 
 > src/main2.js : json 데이터를 사용해서 item 생성, EventListener를 사용한 버튼 이벤트 함수 , 동적 html 생성
 
